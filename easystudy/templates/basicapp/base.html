@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+	<style>
+	body{
+
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+	}
+	</style>
+
+    <link rel="stylesheet" type="text/css" href="{% static "css/new1.css" %}"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" type="text/css" href="{% static "css/navbar.css" %}"/>
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans" rel="stylesheet">
+        <header>
+             <h1>EASY<span>STUDY</span></h1>
+             <nav>
+                 <ul>
+                     <li><a href="{% url 'index' %}">Home</a></li>
+                     <li><a href="{% url 'admin:index' %}">Admin</a> </li>
+                     <li><a href="{% url 'basicapp:register' %}">Register</a></li>
+                     {% if user.is_authenticated %}
+                     <li> <a href="{% url 'logout' %}"> Logout</a> </li>
+                     {% else %}
+                     <li> <a href="{% url 'basicapp:user_login' %}"> Login </a> </li>
+                     {% endif %}
+                 </ul>
+             </nav>
+         </header>
+
+  </head>
+  <body>
+
+
+
+    <!-- <footer>
+          <div class="main-content">
+            <div class="left box">
+              <h2>
+    About us</h2>
+    <div class="content">
+                <p>
+    			Its a place where you can find all the Engineering related videos which help you in building you career in IT sector </p>
+    <div class="social">
+                  <a href="#"><span class="fab fa-facebook-f"></span></a>
+                  <a href="#"><span class="fab fa-twitter"></span></a>
+                  <a href="#"><span class="fab fa-instagram"></span></a>
+                  <a href="#"><span class="fab fa-youtube"></span></a>
+                </div>
+    </div>
+    </div>
+    <div class="center box">
+              <h2>
+    Address</h2>
+    <div class="content">
+                <div class="place">
+                  <span class="fas fa-map-marker-alt"></span>
+                  <span class="text">Ramkrishna Nagar, Patna</span>
+                </div>
+    <div class="phone">
+                  <span class="fas fa-phone-alt"></span>
+                  <span class="text">+091-6202601479</span>
+                </div>
+    <div class="email">
+                  <span class="fas fa-envelope"></span>
+                  <span class="text">abc@example.com</span>
+                </div>
+    </div>
+    </div>
+    <div class="right box">
+              <h2>
+    Creater </h2>
+    <h4>Mayank Kumar</h4>
+    <h4>Shekahr Anand</h4>
+    </div>
+ -->
+
+
+{% block body_block %}
+{% endblock %}
+</body>
+</html>

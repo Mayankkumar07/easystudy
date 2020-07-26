@@ -1,0 +1,137 @@
+{% extends "basicapp/base.html" %}
+{% load static %}
+
+{% block body_block %}
+
+<link rel="stylesheet" type="text/css" href="{% static "css/new1.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "css/navbar.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+<style >
+  .page-wrapper{
+    min-height=100%;
+  }
+  .containt{
+  	margin: 25px 100px 75px 100px;
+  	background-color: white;
+  	padding:50px;
+  	}
+    html,
+	body{
+	height: 100%;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+	}
+  table,th, td {
+	color:black;
+	padding: 25px;
+	border: 1px LightGray;
+	}
+
+
+</style>
+<div class="page-wrapper">
+  <div class="containt">
+    <table style="width:100%">
+				<tr>
+    <th width=30%>courses</th>
+        <th >sourse</th>
+
+        </tr>
+        <tr>
+        <td><img src="https://i.ytimg.com/vi/etwRdfFIk0Q/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDexLnQ_Ixy7Xa0BMlmFaNCDiRwXw" alt="HTML with PYTHON"></td>
+        <td>Complete Web design and Development Course With Python<br><a href="https://www.youtube.com/watch?v=etwRdfFIk0Q&list=PLRc5s2nYgt-SlhTmgPKqQPLrRyMpXj20J" style="color:blue;" >Click Here.....</a></td>
+        </tr>
+        <tr>
+        <td><img src="https://i.ytimg.com/vi/WGJJIrtnfpk/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCTFvQRJVsCwUyGw9ZOS9KQDYE-AA" alt="full python course"</td>
+        <td>Complete Python Course<br><a href="https://www.youtube.com/watch?v=WGJJIrtnfpk" style="color:blue;" >Click Here.....</a></td>
+        </tr>
+        <tr>
+        <td><img src="data:image/jpeg;base64,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" alt="java"></td>
+        <td>Complete java Course<br> <a href="https://www.youtube.com/watch?v=hBh_CC5y8-s" style="color:blue;">Click Here.....</a></td>
+        </tr>
+        <tr>
+        <td><img src="https://i.ytimg.com/vi/aS__9RbCyHg/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDNV0-KPKEELQaS0fJcLmtKwG1c6g" alt="Android Development"></td>
+        <td>Complete Android Development Course<br> <a href="https://www.youtube.com/watch?v=aS__9RbCyHg" style="color:blue;">Click Here.....</a></td>
+        </tr>
+        <tr>
+        <td><img src="https://i.ytimg.com/vi/0xI8pvg5Ivg/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCcMtFAkkXDVpX2heT1k1cPmAZHtQ" alt="c full course"></td>
+        <td>Complete C Course <br> <a href="https://www.youtube.com/watch?v=0xI8pvg5Ivg" style="color:blue;">Click Here.....</a></td>
+        </tr>
+        <tr>
+        <td><img src="https://i.ytimg.com/vi/_bYFu9mBnr4/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLA65DxcZr0UMkhHUG_Xt3QghobHrA" alt="c++"></td>
+        <td>Complete C++ Course<br> <a href="https://www.youtube.com/watch?v=_bYFu9mBnr4" style="color:blue;">Click Here.....</a></td>
+        </tr>
+        <tr>
+        <td><img src="https://i.ytimg.com/vi/BPHAr4QGGVE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCiR1Jv3vPqd-Kkzkcu-uaDfJQpFA" alt="SQL"></td>
+        <td>Complete SQL Course<br> <a href="https://www.youtube.com/watch?v=BPHAr4QGGVE" style="color:blue;">Click Here.....</a></td>
+        </tr>
+        <tr>
+        <td><img src="https://i.ytimg.com/vi/PkZNo7MFNFg/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDQC1NHvPzQPsU4sSerW-Y6PUUa_w" alt="Javascript"></td>
+        <td>Complete Javascript Course<br> <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg" style="color:blue;">Click Here.....</a></td>
+        </tr><tr>
+        <td><img src="https://i.ytimg.com/vi/x0uinJvhNxI/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDmVFHqaBuigbUxiG4cY-KjejY45A" alt="flutter"></td>
+        <td>Complete flutter Course<br> <a href="https://www.youtube.com/watch?v=x0uinJvhNxI" style="color:blue;">Click Here.....</a></td>
+        </tr>
+        <tr>
+        <td><img src="https://i.ytimg.com/vi/OK_JCtrrv-c/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBaBrtaxkpLhXxVBHE9e70I0saBSA" alt="Php"></td>
+        <td>Complete Php Course<br> <a href="https://www.youtube.com/watch?v=OK_JCtrrv-c" style="color:blue;">Click Here.....</a></td>
+        </tr>
+        <!-- for further use
+        <tr>
+        <td><img src="" alt=""></td>
+        <td>Complete <br> <a href="" style="color:blue;">Click Here.....</a></td>
+        </tr>
+        -->
+    </table>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+<footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>
+About us</h2>
+<div class="content">
+            <p>
+      Its a place where you can find all the Engineering related videos which help you in building your career in IT sector </p>
+<div class="social">
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="#"><span class="fab fa-instagram"></span></a>
+              <a href="#"><span class="fab fa-youtube"></span></a>
+            </div>
+</div>
+</div>
+<div class="center box">
+          <h2>
+Address</h2>
+<div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Ramkrishna Nagar, Patna</span>
+            </div>
+<div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+091-XXXXXXXXXX</span>
+            </div>
+<div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">abc@example.com</span>
+            </div>
+</div>
+</div>
+<div class="right box">
+          <h2>
+Creaters </h2>
+<h4>Mayank Kumar</h4>
+<h4>Shekahr Anand</h4>
+</div>
+
+
+{% endblock %}

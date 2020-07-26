@@ -1,0 +1,73 @@
+{% extends "basicapp/base.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" type="text/css" href="{% static "css/new1.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "css/navbar.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}"/>
+
+<div class="page-wrapper" >
+  <div class="containt">
+
+
+  <p id="col">Please Login:</p>
+  <br>
+  <br>
+  <form  action="{% url 'basicapp:user_login' %}" method="POST">
+    {% csrf_token %}
+    <label id="col" for="username">UserName:</label><br>
+    <input type="text" name="username" placeholder="Enter UserName">
+    <br>
+    <label id="col" for="password">Password:</label><br>
+    <input type="password" name="password" >
+    <br>
+    <input type="submit" id="log"  value="Login">
+
+  </form>
+  <p>Not a Member:</p><a id="log" href="{% url 'basicapp:register' %}"><u> Register</u> </a>
+
+</div>
+</div>
+<footer>
+      <div class="main-content">
+        <div class="left box">
+          <h2>
+About us</h2>
+<div class="content">
+            <p>
+      Its a place where you can find all the Engineering related videos which help you in building your career in IT sector </p>
+<div class="social">
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="#"><span class="fab fa-instagram"></span></a>
+              <a href="#"><span class="fab fa-youtube"></span></a>
+            </div>
+</div>
+</div>
+<div class="center box">
+          <h2>
+Address</h2>
+<div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">Ramkrishna Nagar, Patna</span>
+            </div>
+<div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+091-XXXXXXXXXX</span>
+            </div>
+<div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">abc@example.com</span>
+            </div>
+</div>
+</div>
+<div class="right box">
+          <h2>
+Creaters </h2>
+<h4>Mayank Kumar</h4>
+<h4>Shekahr Anand</h4>
+</div>
+
+
+{% endblock %}

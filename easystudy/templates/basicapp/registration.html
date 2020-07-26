@@ -1,0 +1,77 @@
+{% extends "basicapp/base.html" %}
+{% load static %}
+
+{% block body_block %}
+<link rel="stylesheet" type="text/css" href="{% static "css/registration.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/new1.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "css/navbar.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+<div class="page-wrapper" >
+  <div class="containt">
+
+
+  {% if registered %}
+  <p id="col">Thank you for Registration!!</p>
+  <p></p>
+  <p></p>
+  <p id="col" >Please Login to view Channels Page:</p>
+  <p></p>
+ <a id="lin" href="{% url 'basicapp:user_login' %}"> Login </a>
+  {% else %}
+  <p id="col">Register Here!!</p>
+  <p></p>
+  <p id="col" >Fill out the Form:</p>
+
+    <form id="form" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    {{user_form.as_p}}
+    {{profile_form.as_p}}
+    <input type="submit" name="" id="cl" value="Register">
+
+  </form>
+
+  {% endif %}
+  </div>
+    </div>
+  <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>
+  About us</h2>
+  <div class="content">
+              <p>
+  			Its a place where you can find all the Engineering related videos which help you in building your career in IT sector </p>
+  <div class="social">
+                <a href="#"><span class="fab fa-facebook-f"></span></a>
+                <a href="#"><span class="fab fa-twitter"></span></a>
+                <a href="#"><span class="fab fa-instagram"></span></a>
+                <a href="#"><span class="fab fa-youtube"></span></a>
+              </div>
+  </div>
+  </div>
+  <div class="center box">
+            <h2>
+  Address</h2>
+  <div class="content">
+              <div class="place">
+                <span class="fas fa-map-marker-alt"></span>
+                <span class="text">Ramkrishna Nagar, Patna</span>
+              </div>
+  <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+091-XXXXXXXXXX</span>
+              </div>
+  <div class="email">
+                <span class="fas fa-envelope"></span>
+                <span class="text">abc@example.com</span>
+              </div>
+  </div>
+  </div>
+  <div class="right box">
+            <h2>
+  Creaters </h2>
+  <h4>Mayank Kumar</h4>
+  <h4>Shekahr Anand</h4>
+  </div>
+
+{% endblock %}
